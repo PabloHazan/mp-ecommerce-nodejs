@@ -7,6 +7,8 @@ mercadopago.configure({
 
 const baseUrl = 'https://pablohazan-mp-ecommerce-nodejs.herokuapp.com/';
 
+const parseImage = (url) => baseUrl + url;
+
 const createItem = (title, unit_price, quantity, picture_url) => ({
     id: '1234',
     title,
@@ -54,7 +56,7 @@ const payment_methods = {
 
 
 const createPreference = (title, price, unit, img) => ({
-    items: [createItem(title, parseFloat(price), parseInt(unit), img)],
+    items: [createItem(title, parseFloat(price), parseInt(unit), parseImage(img))],
     external_reference,
     payer,
     back_urls,
