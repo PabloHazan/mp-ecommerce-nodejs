@@ -5,7 +5,7 @@ mercadopago.configure({
     integrator_id: 'dev_24c65fb163bf11ea96500242ac130004',
 });
 
-const baseUrl = 'https://pablohazan-mp-ecommerce-nodejs.herokuapp.com/'
+const baseUrl = 'https://pablohazan-mp-ecommerce-nodejs.herokuapp.com/';
 
 const createItem = (title, unit_price, quantity, picture_url) => ({
     id: '1234',
@@ -35,7 +35,7 @@ const payer = {
         type: "",
         number: "471923173"
     },
-}
+};
 
 const auto_return = 'approved';
 const notification_url = `${baseUrl}notification`;
