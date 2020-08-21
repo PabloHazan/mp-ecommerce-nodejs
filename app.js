@@ -1,8 +1,12 @@
 const express = require('express');
 const exphbs = require('express-handlebars');
 const mp = require('./mp');
+const bodyParser = require('body-parser');
 
 const app = express();
+
+app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.json())
 
 app.engine('handlebars', exphbs());
 app.set('view engine', 'handlebars');
