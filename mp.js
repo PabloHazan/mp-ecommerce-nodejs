@@ -67,6 +67,7 @@ const getInitPoint = async ({ title, price, unit, img }) => {
     const preference = createPreference(title, price, unit, img);
     try {
         const response = await mercadopago.preferences.create(preference)
+        console.log("preferenceId", response.body.id)
         return response.body.init_point
     } catch (error) {
         console.log(error);
