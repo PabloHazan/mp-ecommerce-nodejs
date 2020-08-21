@@ -21,7 +21,15 @@ app.get('/detail', async (req, res) => {
 });
 
 app.post('/notification', (req, res) => {
-    console.log(req.body)
+    console.log("------------------------")
+    console.log("---------body-----------")
+    console.log(JSON.stringify(req.body, null, 2))
+    console.log("--------headers--------")
+    console.log(JSON.stringify(req.headers, null, 2))
+    console.log("------------------------")
+    console.log(JSON.stringify(req.query, null, 2))
+    console.log("---------query----------")
+    console.log("------------------------")
     res.status(200).send();
 })
 
